@@ -7,7 +7,7 @@ namespace app;
 class PessoaFisica
 {
     const OBJECT_TYPE = "Humano";
-    private string $name;
+    private static string $name = " ";
     private string $email;
     private string $phone;
     private string $cpf;
@@ -27,8 +27,9 @@ class PessoaFisica
         $this->age = $age;
     }
 
-    public function getInformation(): string
+    public static function getInformation($name): string
     {
-        return $this->name . " - " . self::OBJECT_TYPE;
+        self::$name = $name;
+        return self::$name . " - " . self::OBJECT_TYPE;
     }
 }
