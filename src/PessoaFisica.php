@@ -8,7 +8,13 @@ class PessoaFisica extends Pessoa
 {
     public string $age;
     public string $gender;
-    public string $cpf;
+    protected string $cpf;
+
+    public function getDocument(): string
+    {
+        return $this->cpf; 
+    }
+
     // const OBJECT_TYPE = "Humano";
     // private string $name;
     // private string $email;

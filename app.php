@@ -4,13 +4,14 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 use app\PessoaFisica;
 use app\PessoaJuridica;
+use app\Pessoa;
+use app\PessoaEstrangeira;
 
 //dump(PessoaFisica::OBJECT_TYPE);
 $adam  = new PessoaFisica();
 $adam->name = "adam dias";
 $adam->age = 21;
 $adam->gender = "M";
-$adam->cpf = "12332434534";
 
 dump($adam);
 
@@ -20,8 +21,17 @@ $adamJuridico->cnpj = "123435332";
 
 dump($adamJuridico);
 
-function getName(Pessoa $class): void
-{
-    $class->showName();
-}
-getName($adam);
+$estrangeiro  = new PessoaEstrangeira();
+$estrangeiro->name = "Leones Silva";
+$estrangeiro->age = 24;
+$estrangeiro->gender = "M";
+$estrangeiro->setCpf("2222222");
+
+dump($estrangeiro);
+
+// function getName(Pessoa $class): void
+// {
+//     $class->showName();
+//     echo $class->getDocument(); 
+// }
+// getName($adam);

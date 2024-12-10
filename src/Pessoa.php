@@ -10,4 +10,7 @@ abstract class Pessoa
     {
         echo $this->name . PHP_EOL;
     }
+    
+    abstract public function getDocument(): string;
 }
+
