@@ -3,14 +3,18 @@
 require_once __DIR__ . '/vendor/autoload.php';
 
 use app\PessoaFisica;
+use app\PessoaJuridica;
 
 //dump(PessoaFisica::OBJECT_TYPE);
-$pessoa  = new PessoaFisica(
-    "Adam dias",
-    "adam@gmail.com",
-    "83921345",
-    "1230345345",
-    18
-);
+$adam  = new PessoaFisica();
+$adam->name = "adam dias";
+$adam->age = 21;
+$adam->gender = "M";
 
-dump($pessoa->getInformation());
+dump($adam);
+
+$adamJuridico = new PessoaJuridica;
+$adamJuridico->name = "Alimento e comida";
+$adamJuridico->age = 31;
+
+dump($adamJuridico);
