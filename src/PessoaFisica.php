@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace app;
 
-class PessoaFisica
+class PessoaFisica extends Pessoa
 {
-    public string $name;
     public string $age;
     public string $gender;
+    public string $cpf;
     // const OBJECT_TYPE = "Humano";
     // private string $name;
     // private string $email;
