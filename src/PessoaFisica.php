@@ -4,17 +4,27 @@ declare(strict_types=1);
 
 namespace app;
 
-class PessoaFisica extends Pessoa
+class PessoaFisica extends Pessoa implements PessoaFisicaInterface
 {
     public string $age;
     public string $gender;
-    protected string $cpf;
+    public string $cpf;
 
-    public function getDocument(): string
+    public function getCpf(): string
     {
-        return $this->cpf; 
+        return $this->cpf;
     }
 
+       public function setCpf(string $cpf):void 
+   {
+    $this->cpf = $cpf;
+   } 
+
+   public function getName(): string
+   {
+        return $this->name;
+   }
+}
     // const OBJECT_TYPE = "Humano";
     // private string $name;
     // private string $email;
@@ -40,4 +50,4 @@ class PessoaFisica extends Pessoa
     // {
     //     return $this->name . " - " . self::OBJECT_TYPE;
     // }
-}
+

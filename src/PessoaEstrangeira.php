@@ -6,8 +6,5 @@ namespace app;
 
 class PessoaEstrangeira extends PessoaFisica
 {
-   public function setCpf(string $cpf):void 
-   {
-    $this->cpf = $cpf;
-   } 
+
 }
