@@ -3,6 +3,7 @@
 namespace app;
 
 use stdClass;
+use app\NaturalPerson;
 
 $adam = new NaturalPerson('adam dias', '12312332');
 $adam->gender = 'male';
