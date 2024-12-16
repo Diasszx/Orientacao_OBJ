@@ -1,17 +1,19 @@
 <?php
 
+declare(strict_types=1);
+
 namespace app;
 
-abstract class Pessoa
+class Pessoa
 {
-    public string $name;
+    public function __construct(
+        protected string $name,
+        protected string $document,
+    ){ }
 
-    public function showName(): void
+    public function showName()
     {
-        echo $this->name . PHP_EOL;
+        return $this->name;
     }
-
-    abstract public function getName(): string;
-
 }
 
